@@ -1,0 +1,18 @@
+C:\Users\Kyle\OneDrive\A Level\Computing\Work Experience\Leanix GUI\Leanix GUI\bin\Debug\Leanix GUI.exe.config
+C:\Users\Kyle\OneDrive\A Level\Computing\Work Experience\Leanix GUI\Leanix GUI\bin\Debug\Leanix GUI.exe
+C:\Users\Kyle\OneDrive\A Level\Computing\Work Experience\Leanix GUI\Leanix GUI\bin\Debug\Leanix GUI.pdb
+C:\Users\Kyle\OneDrive\A Level\Computing\Work Experience\Leanix GUI\Leanix GUI\bin\Debug\LeanIX.Api.dll
+C:\Users\Kyle\OneDrive\A Level\Computing\Work Experience\Leanix GUI\Leanix GUI\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Kyle\OneDrive\A Level\Computing\Work Experience\Leanix GUI\Leanix GUI\bin\Debug\LeanIX.Api.pdb
+C:\Users\Kyle\OneDrive\A Level\Computing\Work Experience\Leanix GUI\Leanix GUI\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Kyle\OneDrive\A Level\Computing\Work Experience\Leanix GUI\Leanix GUI\obj\Debug\Leanix GUI.csprojResolveAssemblyReference.cache
+C:\Users\Kyle\OneDrive\A Level\Computing\Work Experience\Leanix GUI\Leanix GUI\obj\Debug\Leanix_GUI.Form1.resources
+C:\Users\Kyle\OneDrive\A Level\Computing\Work Experience\Leanix GUI\Leanix GUI\obj\Debug\Leanix_GUI.Properties.Resources.resources
+C:\Users\Kyle\OneDrive\A Level\Computing\Work Experience\Leanix GUI\Leanix GUI\obj\Debug\Leanix GUI.csproj.GenerateResource.Cache
+C:\Users\Kyle\OneDrive\A Level\Computing\Work Experience\Leanix GUI\Leanix GUI\obj\Debug\Leanix GUI.exe
+C:\Users\Kyle\OneDrive\A Level\Computing\Work Experience\Leanix GUI\Leanix GUI\obj\Debug\Leanix GUI.pdb
+C:\Users\Kyle\OneDrive\A Level\Computing\Work Experience\Leanix GUI\Leanix GUI\obj\Debug\Leanix_GUI.ServiceInfo.resources
+C:\Users\Kyle\OneDrive\A Level\Computing\Work Experience\Leanix GUI\Leanix GUI\bin\Debug\Leanix GUI.exe.manifest
+C:\Users\Kyle\OneDrive\A Level\Computing\Work Experience\Leanix GUI\Leanix GUI\bin\Debug\Leanix GUI.application
+C:\Users\Kyle\OneDrive\A Level\Computing\Work Experience\Leanix GUI\Leanix GUI\obj\Debug\Leanix GUI.exe.manifest
+C:\Users\Kyle\OneDrive\A Level\Computing\Work Experience\Leanix GUI\Leanix GUI\obj\Debug\Leanix GUI.application

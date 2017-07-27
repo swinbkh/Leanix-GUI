@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="Leanix GUI.exe" version="1.0.0.1" publicKeyToken="93f94cf47fcba1ad" language="neutral" processorArchitecture="msil" type="win32" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="Leanix GUI" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="Leanix GUI.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          UAC Manifest Options
+          If you want to change the Windows User Account Control level replace the 
+          requestedExecutionLevel node with one of the following.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+         If you want to utilize File and Registry Virtualization for backward 
+         compatibility then delete the requestedExecutionLevel node.
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Leanix GUI.exe" size="13752">
+      <assemblyIdentity name="Leanix GUI" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>dGKn4SK0HH0kbI1cSz8M4YpTqlSOq3vbIZgdga/C6zs=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="LeanIX.Api.dll" size="308224">
+      <assemblyIdentity name="LeanIX.Api" version="2.1.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>NT7O7F1XBkHZGTC22+5Ka4eSbU6+MFsuyKhbcyprI3I=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Newtonsoft.Json.dll" size="481792">
+      <assemblyIdentity name="Newtonsoft.Json" version="6.0.0.0" publicKeyToken="30AD4FE6B2A6AEED" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>oCgQQNGe7RgacLu+md+WK00tm8mPgOVi7aXN9cpkRfo=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="Leanix GUI.exe.config" size="189">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>6N7MliNbVJSIAIPrecIshMbZ7zEoKLr5SQvud4LDUOw=</dsig:DigestValue>
+    </hash>
+  </file>
+<publisherIdentity name="CN=KHS-E5550\Kyle" issuerKeyHash="4ad1cefa0a9fd116e72ab77a21fbfea549b68c59" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>/fNoaESDolxl0uOW0o0k5w7Cxz/1HmNRSqF8bBTvlvs=</DigestValue></Reference></SignedInfo><SignatureValue>WUSo11SyaigvURvRGtG5NQwFYYgiARRD+YmOHGeexQcyIeMt4OE/KHEXxfLxN4xs3nqhf1mtltUniZQIeBRpWHXeiSKqppHxp2KaeuOzk/T9kEqQY+0AR3DhW4Gu/jhDEl02k3RUdFTXRwaMJR/5UphipOTmjeSTuyW5AQL2NMI=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>7LLeTpwLjxyIHbfbpBOQrrhTSjTmKfTC35oyJ+5BALBAYgw0ehejxaJzK1gkpkz9EyIy1LaF3nTf9tdAOHPuDrSNVJN4uqSw07m+zpv89TW3SS8wr2hPfzQmUcrhZ4oS9xufO9IV2U5+loOtEafocC62H2SWDzqCyYY2VtDANBk=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="fb96ef146c7ca14a51631ef53fc7c20ee7248dd296e3d2655ca283446868f3fd" Description="" Url=""><as:assemblyIdentity name="Leanix GUI.exe" version="1.0.0.1" publicKeyToken="93f94cf47fcba1ad" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=KHS-E5550\Kyle</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>t3RFwt0K+lBji5Bzj35em75MxFszYQzcNykXFh16U8s=</DigestValue></Reference></SignedInfo><SignatureValue>S/TrzqSsejGLsPzcv930NDzYsPPYDs004QJ6Lvkl86JTzcQhVgN6xD6sHcG5vR++u0NDnF2eiu0kRWmQTgF1nwLVDRGuM8Ngv+2VsAnb3jLC7bCz7OlgoHO+Pb6YgGoyv1Yxm+h5HY5ENCsoMR39YDzL/W5sUKPbrj1BcLTzir4=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>7LLeTpwLjxyIHbfbpBOQrrhTSjTmKfTC35oyJ+5BALBAYgw0ehejxaJzK1gkpkz9EyIy1LaF3nTf9tdAOHPuDrSNVJN4uqSw07m+zpv89TW3SS8wr2hPfzQmUcrhZ4oS9xufO9IV2U5+loOtEafocC62H2SWDzqCyYY2VtDANBk=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB0TCCATqgAwIBAgIQUApYbx9hZJFK0RaFj1JrmDANBgkqhkiG9w0BAQsFADAnMSUwIwYDVQQDHhwASwBIAFMALQBFADUANQA1ADAAXABLAHkAbABlMB4XDTE3MDcyNjE2MDIxMloXDTE4MDcyNjIyMDIxMlowJzElMCMGA1UEAx4cAEsASABTAC0ARQA1ADUANQAwAFwASwB5AGwAZTCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEA7LLeTpwLjxyIHbfbpBOQrrhTSjTmKfTC35oyJ+5BALBAYgw0ehejxaJzK1gkpkz9EyIy1LaF3nTf9tdAOHPuDrSNVJN4uqSw07m+zpv89TW3SS8wr2hPfzQmUcrhZ4oS9xufO9IV2U5+loOtEafocC62H2SWDzqCyYY2VtDANBkCAwEAATANBgkqhkiG9w0BAQsFAAOBgQDpQ+e65aTLu/L7omy/hp0smdUZoZV6YsyF6ZhOLcUzYdWP9ZhGuOYMbMblbxcq9SUcz13r2GOOo40N7WuOS9e4sET6xVX6qjQsRfqXOqrbWPM1c2cKmcod1RYaRLFLTqeq6YRPSbmvla74/a8GjT5pyhhgAgHhLUahUGD7JtixoA==</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>

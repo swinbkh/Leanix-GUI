@@ -16,7 +16,12 @@ namespace Leanix_GUI
     
     public partial class Form1 : Form
     {
-        private string ID;
+        private string ID;      //used for global service reference
+        string Token = "YzGaOVCSRavq3bCAKarHNzWnJWs8WUVZtXUa2AVB";
+        string Domain = "https://app.leanix.net/UniversityofNottinghamDEMO/api/v1";
+
+
+        ServicesApi api = new ServicesApi();        //New instance of the leaIX Api
 
         public Form1()
         {
@@ -24,29 +29,30 @@ namespace Leanix_GUI
             try
             {
                 ApiClient client = new ApiClientBuilder()
-                    .WithBasePath("https://app.leanix.net/UniversityofNottinghamDEMO/api/v1")
-                    .WithTokenProviderHost("app.leanix.net")
-                    .WithApiToken("YzGaOVCSRavq3bCAKarHNzWnJWs8WUVZtXUa2AVB")
+                    .WithBasePath(Domain)       //Domain Name
+                    .WithTokenProviderHost("app.leanix.net")        //Base URL
+                    .WithApiToken(Token)       //Auth Token
                     .Build();
 
                 ServicesApi api = new ServicesApi();
-                List<Service> services = api.getServices(false, "");
+                List<Service> services = api.getServices(false, "");        //List all services
                 foreach (Service s in services)
                 {
 
-                    listBox1.Items.Add(new ListBoxItem {
-                        DisplayName = s.displayName,
+                    listBox1.Items.Add(new ListBoxItem {        //add to listbox
+                        DisplayName = s.displayName,        //keep name and ID seperate
                         Identifier = s.ID
                     });
                     Console.WriteLine(s.ID);
                 }
-                listBox1.DisplayMember = "DisplayName";
-                listBox1.ValueMember = "Identifier";
+                listBox1.DisplayMember = "DisplayName";     //display Name of service
+                listBox1.ValueMember = "Identifier";        //Keep ID of selected service for later reference
                 listBox1.Update();
             }
             catch (Exception ex)
             {
                 System.Console.WriteLine(ex.Message);
+                label1.Text = "Unable to connect.";
             }
 
             System.Console.ReadLine();
@@ -61,10 +67,69 @@ namespace Leanix_GUI
 
         private void button1_Click(object sender, EventArgs e)
         {
+            ApiClient client = new ApiClientBuilder()
+    .WithBasePath(Domain)
+    .WithTokenProviderHost("app.leanix.net")
+    .WithApiToken(Token)
+    .Build();
+            
             ServiceInfo ServiceInformation = new ServiceInfo();
             ServiceInformation.Show();
-            ServiceInformation.label5.Text = ID;
-            ServiceInformation.label6.Text = api
+            StringBuilder formatted = new StringBuilder();
+
+            Service service = api.getService(ID, false);
+            string name = "Name: " + service.displayName + "\n";
+            string description = "Description: \n\t" + service.description + "\n";
+            string serviceID = "ID: " + ID + "\n";
+
+
+
+
+
+            List<FactSheetHasIfaceProvider> Providers = (api.getFactSheetHasIfaceProviders(ID));
+
+            string providedInterfaces = "Provided Interfaces: \n";
+            for (int i = 0; i < Providers.Count; i++)
+            {
+                string relation = Providers[i].ID;
+                providedInterfaces = providedInterfaces + ("\t" + api.getService((Providers[i]).ifaceID, false).displayName) + "\n";    //Display Name Of Provided Interface
+            }
+
+            List<FactSheetHasIfaceConsumer> Consumers = (api.getFactSheetHasIfaceConsumers(ID));
+
+            string consumedInterfaces = "Consumed Interfaces: \n";
+            for (int i = 0; i < Consumers.Count; i++)
+            {
+                string relation = Providers[i].ID;
+                consumedInterfaces = consumedInterfaces + ("\t"+api.getService((Consumers[i]).ifaceID, false).displayName) + "\n";    //Display Name Of Provided Interface
+            }
+            if(providedInterfaces == "Provided Interfaces: \n")
+            { providedInterfaces = providedInterfaces + "\tNone.\n"; }
+
+            if (consumedInterfaces == "Consumed Interfaces: \n")
+            { consumedInterfaces = consumedInterfaces + "\tNone."; }
+
+
+
+
+
+            formatted.Append(description).Append(providedInterfaces).Append(consumedInterfaces);
+            ServiceInformation.label5.Text = name.Remove(0, 6);
+            ServiceInformation.label6.Text = ID;
+            ServiceInformation.richTextBox1.Text = formatted.ToString();
+            ServiceInformation.richTextBox1.ReadOnly = true;
+
+
+
+
+
+
+
+
+
+
+
+
         }
     }
     class ListBoxItem
